@@ -28,7 +28,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="#home" className="flex-shrink-0">
-          <span className="text-xl sm:text-2xl font-serif font-bold text-foreground">
+          <span className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-foreground">
             V <span className="text-secondary">Create</span> Events
           </span>
         </Link>
