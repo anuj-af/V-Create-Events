@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -31,7 +31,6 @@ export function Contact() {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook', color: '#1877F2' },
     { icon: Instagram, href: '#', label: 'Instagram', color: '#E4405F' },
     { icon: MessageCircle, href: '#', label: 'WhatsApp', color: '#25D366' },
     { icon: Mail, href: 'mailto:hello@v-create.com', label: 'Email', color: '#EA4335' },
@@ -154,7 +153,8 @@ export function Contact() {
                 <MapPin size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-sm font-semibold text-foreground-secondary">Location</p>
-                  <p className="text-foreground">Mumbai, India</p>
+                  <p className="text-foreground">Indore, India</p>
+                  <p className="text-foreground">Dubai, UAE</p>
                 </div>
               </div>
             </div>

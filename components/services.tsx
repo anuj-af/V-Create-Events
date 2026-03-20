@@ -120,7 +120,6 @@ function ServiceCard({ title, description, isExpanded, onToggle }: any) {
 }
 
 export function Services() {
-  const [activeTab, setActiveTab] = useState<'social' | 'corporate'>('social');
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
 
   const toggleCard = (id: string) => {
@@ -130,10 +129,7 @@ export function Services() {
     }));
   };
 
-  const services = activeTab === 'social' ? socialServices : corporateServices;
-  const bgColor = activeTab === 'social' ? 'bg-background' : 'bg-foreground';
-  const textColor = activeTab === 'social' ? 'text-foreground' : 'text-white';
-  const tabBgColor = activeTab === 'social' ? 'bg-background-secondary' : 'bg-gray-900';
+  const services = socialServices;
 
   return (
     <section id="services" className="py-0">
@@ -152,137 +148,49 @@ export function Services() {
         </div>
       </div>
 
-      {/* Tab Buttons */}
-      <div className="grid grid-cols-2 border-b border-border">
-        <button
-          onClick={() => {
-            setActiveTab('social');
-            setExpandedCards({});
-          }}
-          className={`px-6 sm:px-8 py-8 md:py-10 text-center font-semibold text-lg tracking-wide transition-colors duration-300 border-r border-border ${
-            activeTab === 'social'
-              ? 'bg-background text-foreground'
-              : 'bg-background text-foreground-secondary hover:bg-background-secondary'
-          }`}
-        >
-          SOCIAL
-        </button>
-        <button
-          onClick={() => {
-            setActiveTab('corporate');
-            setExpandedCards({});
-          }}
-          className={`px-6 sm:px-8 py-8 md:py-10 text-center font-semibold text-lg tracking-wide transition-colors duration-300 ${
-            activeTab === 'corporate'
-              ? 'bg-foreground text-white'
-              : 'bg-foreground text-gray-300 hover:bg-gray-900'
-          }`}
-        >
-          CORPORATE
-        </button>
+      {/* Social Heading - Centered */}
+      <div className="bg-gray-900 hover:bg-gray-700 border-b border-border px-6 sm:px-8 py-8 md:py-10 transition-colors duration-300 ease-in-out">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white text-center">SOCIAL</h3>
       </div>
 
-      {/* Content Area - Two Column Layout */}
+      {/* Content Area - Two Column Layout (Social Only) */}
       <div className="flex flex-col lg:flex-row">
         {/* Social Events Content - Left Column */}
-        {activeTab === 'social' && (
-          <>
-            <div className="w-full lg:w-1/2 bg-background px-6 sm:px-8 py-8 md:py-12">
-              <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-8">SERVICES</h3>
-              <div className="space-y-0">
-                {services.map((service) => (
-                  <ServiceCard
-                    key={service.id}
-                    title={service.title}
-                    description={service.description}
-                    isExpanded={expandedCards[service.id] || false}
-                    onToggle={() => toggleCard(String(service.id))}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* Social Image - Right Column (hidden on mobile) */}
-            <div className="hidden lg:flex w-full lg:w-1/2 bg-background">
-              <div className="w-full relative min-h-96">
-                <Image
-                  src="/placeholder.png"
-                  alt="Social Events"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Social Image - Mobile */}
-            <div className="lg:hidden w-full h-64 sm:h-80 relative bg-background">
-              <Image
-                src="/placeholder.png"
-                alt="Social Events"
-                fill
-                className="object-cover"
+        <div className="w-full lg:w-1/2 bg-background px-6 sm:px-8 py-8 md:py-12">
+          <div className="space-y-0">
+            {services.map((service) => (
+              <ServiceCard
+                key={service.id}
+                title={service.title}
+                description={service.description}
+                isExpanded={expandedCards[service.id] || false}
+                onToggle={() => toggleCard(String(service.id))}
               />
-            </div>
-          </>
-        )}
+            ))}
+          </div>
+        </div>
 
-        {/* Corporate Events Content - Right Column */}
-        {activeTab === 'corporate' && (
-          <>
-            <div className="hidden lg:flex w-full lg:w-1/2 bg-foreground">
-              <div className="w-full relative min-h-96">
-                <Image
-                  src="/placeholder.png"
-                  alt="Corporate Events"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+        {/* Social Image - Right Column (hidden on mobile) */}
+        <div className="hidden lg:flex w-full lg:w-1/2 bg-background">
+          <div className="w-full relative min-h-96">
+            <Image
+              src="/placeholder.png"
+              alt="Social Events"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
 
-            <div className="w-full lg:w-1/2 bg-foreground px-6 sm:px-8 py-8 md:py-12 text-white">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-8">SERVICES</h3>
-              <div className="space-y-0">
-                {services.map((service) => (
-                  <div key={service.id} className="border-b border-gray-700 last:border-b-0">
-                    <button
-                      onClick={() => toggleCard(String(service.id))}
-                      className="w-full py-5 px-0 flex items-center justify-between hover:opacity-70 transition-opacity duration-300"
-                    >
-                      <h4 className="text-sm sm:text-base font-semibold text-white text-left">
-                        {service.title}
-                      </h4>
-                      <ChevronDown
-                        size={20}
-                        className={`text-gold flex-shrink-0 ml-4 transition-transform duration-300 ${
-                          expandedCards[service.id] ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-
-                    {expandedCards[service.id] && (
-                      <div className="pb-5 pr-6">
-                        <p className="text-sm text-gray-300 leading-relaxed">
-                          {service.description}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Corporate Image - Mobile */}
-            <div className="lg:hidden w-full h-64 sm:h-80 relative bg-foreground">
-              <Image
-                src="/placeholder.png"
-                alt="Corporate Events"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </>
-        )}
+        {/* Social Image - Mobile */}
+        <div className="lg:hidden w-full h-64 sm:h-80 relative bg-background">
+          <Image
+            src="/placeholder.png"
+            alt="Social Events"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
 
     </section>
