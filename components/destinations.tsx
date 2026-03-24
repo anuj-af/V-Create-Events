@@ -32,7 +32,7 @@ export function Destinations() {
         </div>
 
         {/* Destinations Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid justify-center gap-4 md:gap-16 grid-cols-[repeat(auto-fit,minmax(200px,300px))]">
           {destinations.map((destination) => (
             <div
               key={destination.id}
