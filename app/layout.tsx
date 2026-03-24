@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { WhatsappWidget } from '@/components/whatsapp-widget'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({ 
@@ -51,20 +52,8 @@ export default function RootLayout({
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="font-sans antialiased bg-white text-gray-900">
         {children}
+        <WhatsappWidget />
         <Analytics />
-        <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              var wa_btnSetting = {"btnColor":"#D4AF7A","ctaText":"Contact Us","cornerRadius":40,"marginBottom":20,"marginLeft":20,"marginRight":20,"btnPosition":"right","whatsAppNumber":"917999992961","welcomeMessage":"Hi, I'm looking for event planning services and would like to discuss my requirements with The Shadi Knot. Please let me know how we can proceed.","zIndex":999999,"btnColorScheme":"light"};
-              window.onload = () => {
-                if (window._waEmbed) {
-                  window._waEmbed(wa_btnSetting);
-                }
-              };
-            `,
-          }}
-        />
       </body>
     </html>
   )

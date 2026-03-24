@@ -143,7 +143,7 @@ export function Services() {
             OUR SERVICES
           </h2>
           <p className="text-base sm:text-lg text-foreground-secondary max-w-2xl mx-auto">
-            At V-Create Events, we take a dream and make it a reality. No goal is too big and no task is too small.
+            At V-Create Events, every dream finds its moment and we make it unforgettable. No goal is too big, no task is too small.
           </p>
         </div>
       </div>

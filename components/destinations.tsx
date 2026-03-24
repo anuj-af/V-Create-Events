@@ -5,7 +5,7 @@ import Image from 'next/image';
 const destinations = [
   {
     id: 1,
-    name: 'TURKEY',
+    name: 'INDIA',
     image: '/placeholder.png',
   },
   {
@@ -15,17 +15,7 @@ const destinations = [
   },
   {
     id: 3,
-    name: 'INDIA',
-    image: '/placeholder.png',
-  },
-  {
-    id: 4,
-    name: 'QATAR',
-    image: '/placeholder.png',
-  },
-  {
-    id: 5,
-    name: 'SPAIN',
+    name: 'TURKEY',
     image: '/placeholder.png',
   },
 ];

@@ -7,24 +7,17 @@ import Image from 'next/image';
 const teamMembers = [
   {
     id: 1,
-    name: 'Vishesh Patni',
-    title: 'Founder & Managing Director',
+    name: 'Vishu Patni',
+    title: 'Founder, V-Create Events & Decor',
     image: '/placeholder.png',
-    bio: 'Mr. Vishesh Patni is a seasoned professional with extensive experience in banqueting, hospitality operations, with a career boasting senior leadership roles at esteemed institutions such as the TAJ group and The Park Hotel chain. However, it is his expertise and leadership as Managing Director of his massively successful international brainchild, V-Create Events, which has truly defined his illustrious career. His remarkable technical knowledge and tireless efforts have cemented his identity as a pioneer in the ever-growing event management industry, which continues to set new benchmarks for excellence with every event.',
+    bio: 'Vishu is the heart and soul behind every celebration we create. With a fearless, youthful energy and meticulous eye for detail, he brings visions to life with precision, creativity, and care. From the first conversation to the final moment, he listens, adapts, and goes above and beyond so every element feels personal and unforgettable.',
   },
   {
     id: 2,
-    name: 'Amanpal Tongya',
-    title: 'Creative Director',
+    name: 'Yash Saluja',
+    title: 'Operations & Experience Lead',
     image: '/placeholder.png',
-    bio: 'With over 15 years of experience in event design and curation, Amanpal brings a unique vision to every project. Her innovative approach to storytelling through events has transformed hundreds of celebrations into unforgettable experiences. She believes in the power of meticulous details and creative excellence.',
-  },
-  {
-    id: 3,
-    name: 'Avani Tongia',
-    title: 'Operations Manager',
-    image: '/placeholder.png',
-    bio: 'Avani ensures every event runs flawlessly with his strategic planning and impeccable execution. His background in logistics and coordination combined with his passion for excellence makes him an invaluable asset. He takes pride in turning complex requirements into seamless experiences.',
+    bio: 'Yash is the dynamic whirlwind fueling V-Create with boundless energy and hands-on drive. He lives every event end-to-end—first to arrive, last to leave—overseeing every detail on the ground to make sure nothing is left to chance and every moment feels extraordinary.',
   },
 ];
 
@@ -57,7 +50,7 @@ export function AboutUs() {
             ABOUT US
           </h2>
           <p className="text-base sm:text-lg text-foreground-secondary leading-relaxed max-w-4xl mx-auto">
-            Discover the epitome of luxury and excellence with VCreate Events, celebrated as one of the leading event management companies across Asia. Our team of uniquely skilled multicultural professionals has successfully executed over 150 events in the last 10 years, introducing the great Indian wedding experience to a number of locations across the world for the very first time and hosting several high-profile corporates for a variety of events, both domestic and international. We offer end-to-end event planning solutions covering every aspect of the experience, and our detail-oriented approach ensures every event we do is a distinctly personalised experience tailored to exceed every expectation. With a combined experience of over 40 years in Hospitality and the expertise of tenured hoteliers, our team is ready to meet your every need with perfection and offer you an experience to remember.
+            Discover the art of extraordinary celebrations with V-Create Events and Decor. Our team of passionate and creative professionals has successfully delivered over 100+ wedding events across India, UAE, and Turkey, bringing exceptional experiences to life across borders. At V-Create, we specialize in end-to-end event planning and décor solutions, ensuring every detail is thoughtfully curated and every moment is nothing short of spectacular. Our detail-oriented approach guarantees that each event is a uniquely personalized experience, crafted to exceed every expectation. Backed by years of combined expertise in event management and design, our dedicated team is committed to meeting your every need with precision, creativity, and care. From the first idea to the final moment, we turn your vision into a reality you will cherish forever.
           </p>
         </div>
 
