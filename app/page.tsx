@@ -9,6 +9,7 @@ import { InstagramSection } from '@/components/instagram-section'
 import { Testimonials } from '@/components/testimonials'
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
+import { ValuesSection } from '@/components/values-section'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Services />
       <Approach />
       <Portfolio />
+      <ValuesSection />
       <InstagramSection />
       <Destinations />
       <Testimonials />
