@@ -11,7 +11,7 @@ export function WhatsappWidget() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-3 rounded-full bg-[#D4AF7A] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-black/10 transition-transform duration-200 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-3 rounded-full bg-[#D00000] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-black/10 transition-transform duration-200 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       aria-label="Chat with us on WhatsApp"
     >
       <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/15">

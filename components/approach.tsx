@@ -6,7 +6,7 @@ const steps = [
     title: 'Tell Us Your Story.',
     description:
       'Whether you\'re planning a luxury destination or a low-key wedding, we want to learn more about your story, vision, goals, budget, inspiration and challenges surrounding your upcoming celebration. Together, we can dream up an initial design and ideas to begin crafting your perfect day.',
-    image: '/placeholder.png',
+    image: '/approach1.png',
     imagePosition: 'left' as const,
   },
   {
@@ -14,7 +14,7 @@ const steps = [
     title: "We'll Establish A Firm Plan!",
     description:
       'Based on your vision and our initial meeting, we will begin to build your event from the ground up. We secure & suggest vendors, curate the event, design all your details and present the best options for you to make the perfect decisions for you and your event.',
-    image: '/placeholder.png',
+    image: '/approach2.png',
     imagePosition: 'right' as const,
   },
   {
@@ -22,7 +22,7 @@ const steps = [
     title: "It's All In The Details",
     description:
       'As an experienced event team, we guide you through every aspect of your big day. From color palettes to table layouts, we ensure every element aligns with your vision and style. Our expertise transforms your dream into a reality with meticulous attention to detail.',
-    image: '/placeholder.png',
+    image: '/approach3.png',
     imagePosition: 'left' as const,
   },
   {
@@ -30,7 +30,7 @@ const steps = [
     title: "Let's Get You Married!",
     description:
       'On the big day, our team is there to handle every detail so you can focus on what matters most—celebrating with your loved ones. From setup to breakdown, we manage all logistics, timings, and unforeseen challenges to ensure your day is nothing short of magical.',
-    image: '/placeholder.png',
+    image: '/approach4.png',
     imagePosition: 'right' as const,
   },
 ];

@@ -6,17 +6,17 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const heroSlides = [
   {
     id: 1,
-    image: '/placeholder.png',
+    image: '/banners/3.png',
     headline: 'WHISPERING LIFE INTO WEDDING DREAMS',
   },
   {
     id: 2,
-    image: '/placeholder.png',
+    image: '/banners/2.png',
     headline: 'LET US COORDINATE, SO YOU CAN CELEBRATE',
   },
   {
     id: 3,
-    image: '/placeholder.png',
+    image: '/banners/1b.png',
     headline: 'CREATING UNFORGETTABLE MOMENTS',
   },
 ];
@@ -27,7 +27,7 @@ export function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
+    }, 2000);
     return () => clearInterval(timer);
   }, []);
 

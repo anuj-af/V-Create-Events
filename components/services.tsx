@@ -174,7 +174,7 @@ export function Services() {
         <div className="hidden lg:flex w-full lg:w-1/2 bg-background">
           <div className="w-full relative min-h-96">
             <Image
-              src="/placeholder.png"
+              src="/services.png"
               alt="Social Events"
               fill
               className="object-cover"
@@ -185,7 +185,7 @@ export function Services() {
         {/* Social Image - Mobile */}
         <div className="lg:hidden w-full h-64 sm:h-80 relative bg-background">
           <Image
-            src="/placeholder.png"
+            src="/services.png"
             alt="Social Events"
             fill
             className="object-cover"

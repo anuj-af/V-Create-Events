@@ -6,45 +6,24 @@ const portfolioItems = [
   {
     id: 1,
     title: 'Eternal Garden Wedding',
-    image: '/placeholder.png',
+    image: '/portfolio/2.png',
     testimonial: 'Absolutely magical! They made our dreams come true.',
     couple: 'Sarah & John',
   },
   {
     id: 2,
     title: 'Royal Celebration',
-    image: '/placeholder.png',
+    image: '/portfolio/3.png',
     testimonial: 'Every detail was perfect. Thank you for an unforgettable day!',
     couple: 'Priya & Arjun',
   },
   {
     id: 3,
     title: 'Beachside Romance',
-    image: '/placeholder.png',
+    image: '/portfolio/1.png',
     testimonial: 'Professional, creative, and so easy to work with.',
     couple: 'Emma & Michael',
-  },
-  {
-    id: 4,
-    title: 'Modern Elegance',
-    image: '/placeholder.png',
-    testimonial: 'Our vision became reality thanks to their expertise.',
-    couple: 'Jessica & David',
-  },
-  {
-    id: 5,
-    title: 'Festive Fusion',
-    image: '/placeholder.png',
-    testimonial: 'Beautifully coordinated with amazing attention to detail.',
-    couple: 'Aisha & Rohan',
-  },
-  {
-    id: 6,
-    title: 'Luxury Destination',
-    image: '/placeholder.png',
-    testimonial: 'A truly once-in-a-lifetime experience.',
-    couple: 'Sophie & James',
-  },
+  }
 ];
 
 export function Portfolio() {
@@ -83,7 +62,7 @@ export function Portfolio() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
 
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

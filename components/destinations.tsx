@@ -6,17 +6,17 @@ const destinations = [
   {
     id: 1,
     name: 'INDIA',
-    image: '/placeholder.png',
+    image: '/destination1.png',
   },
   {
     id: 2,
     name: 'UNITED ARAB EMIRATES',
-    image: '/placeholder.png',
+    image: '/destination2.png',
   },
   {
     id: 3,
     name: 'TURKEY',
-    image: '/placeholder.png',
+    image: '/destination3.png',
   },
 ];
 
@@ -38,25 +38,17 @@ export function Destinations() {
               key={destination.id}
               className="relative aspect-square overflow-hidden group cursor-pointer"
             >
-              {/* Grayscale Image (Default) */}
+              {/* Single Color Image */}
               <Image
                 src={destination.image}
                 alt={destination.name}
                 fill
-                className="object-cover w-full h-full transition-opacity duration-300 group-hover:opacity-0 grayscale"
+                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
               />
 
-              {/* Color Image (Hover) */}
-              <Image
-                src={destination.image}
-                alt={destination.name}
-                fill
-                className="object-cover w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-              />
-
-              {/* Text Overlay */}
+              {/* Overlay */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
-                <h3 className="text-white font-serif text-2xl sm:text-xl md:text-2xl font-bold text-center tracking-wider text-balance px-4">
+                <h3 className="text-white font-serif text-2xl sm:text-xl md:text-2xl font-bold text-center tracking-wider px-4">
                   {destination.name}
                 </h3>
               </div>

@@ -43,7 +43,7 @@ export function Contact() {
         <div className="mb-16 rounded-lg overflow-hidden">
           <div className="h-64 sm:h-80 md:h-96 relative">
             <img
-              src="/placeholder.png"
+              src="/contact-banner.png"
               alt="Contact us"
               className="w-full h-full object-cover"
             />

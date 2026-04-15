@@ -9,16 +9,9 @@ const teamMembers = [
     id: 1,
     name: 'Vishu Patni',
     title: 'Founder, V-Create Events & Decor',
-    image: '/placeholder.png',
+    image: '/founders/vishesh.png',
     bio: 'Vishu is the heart and soul behind every celebration we create. With a fearless, youthful energy and meticulous eye for detail, he brings visions to life with precision, creativity, and care. From the first conversation to the final moment, he listens, adapts, and goes above and beyond so every element feels personal and unforgettable.',
-  },
-  {
-    id: 2,
-    name: 'Yash Saluja',
-    title: 'Operations & Experience Lead',
-    image: '/placeholder.png',
-    bio: 'Yash is the dynamic whirlwind fueling V-Create with boundless energy and hands-on drive. He lives every event end-to-end—first to arrive, last to leave—overseeing every detail on the ground to make sure nothing is left to chance and every moment feels extraordinary.',
-  },
+  }
 ];
 
 export function AboutUs() {
@@ -39,7 +32,7 @@ export function AboutUs() {
   const currentMember = teamMembers[currentIndex];
 
   return (
-    <section id="about" className="py-20 px-6 sm:px-8 md:py-28 lg:py-32 bg-background">
+    <section id="about" className="py-16 px-6 sm:px-8 md:py-24 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
@@ -58,22 +51,22 @@ export function AboutUs() {
         <div className="relative">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             {/* Left Navigation Arrow */}
-            <button
+            {/* <button
               onClick={goToPrevious}
               className="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-foreground-secondary hover:border-secondary text-foreground-secondary hover:text-secondary transition-colors duration-300 items-center justify-center"
               aria-label="Previous member"
             >
               <ChevronLeft size={24} />
-            </button>
+            </button> */}
 
             {/* Team Member Image */}
             <div className="w-full lg:w-5/12 flex-shrink-0">
-              <div className="relative aspect-square rounded-lg overflow-hidden">
+              <div className="relative aspect-square rounded-lg overflow-hidden p-4 bg-gray-100">
                 <Image
                   src={currentMember.image}
                   alt={currentMember.name}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </div>
@@ -108,17 +101,17 @@ export function AboutUs() {
             </div>
 
             {/* Right Navigation Arrow */}
-            <button
+            {/* <button
               onClick={goToNext}
               className="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-foreground-secondary hover:border-secondary text-foreground-secondary hover:text-secondary transition-colors duration-300 items-center justify-center"
               aria-label="Next member"
             >
               <ChevronRight size={24} />
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Navigation */}
-          <div className="lg:hidden flex gap-4 justify-center mt-8">
+          {/* <div className="lg:hidden flex gap-4 justify-center mt-8">
             <button
               onClick={goToPrevious}
               className="p-3 rounded-full border-2 border-foreground-secondary hover:border-secondary text-foreground-secondary hover:text-secondary transition-colors duration-300"
@@ -133,7 +126,7 @@ export function AboutUs() {
             >
               <ChevronRight size={20} />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
