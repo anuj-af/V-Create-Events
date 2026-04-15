@@ -4,19 +4,19 @@ import { Analytics } from '@vercel/analytics/next'
 import { WhatsappWidget } from '@/components/whatsapp-widget'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({ 
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ['400', '500', '600', '700'],
   variable: '--font-serif'
 })
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: '--font-sans'
 })
 
 export const metadata: Metadata = {
-  title: 'Luxury Wedding Events - Premium Wedding Planning & Design',
+  title: 'V-Create Events & Decor — Luxury Wedding Planning & Design',
   description: 'Discover luxury wedding and events services with premium planning, stunning design, and unforgettable celebrations for the most important moments of your life.',
   icons: {
     icon: [

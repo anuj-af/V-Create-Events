@@ -1,5 +1,7 @@
 'use client';
 
+import { useInView } from '@/hooks/use-in-view';
+
 const steps = [
   {
     number: 'ONE',
@@ -35,62 +37,73 @@ const steps = [
   },
 ];
 
-export function Approach() {
+function ApproachStep({ step, index }: { step: typeof steps[0]; index: number }) {
+  const { ref, isInView } = useInView({ threshold: 0.15 });
+
   return (
-    <section id="approach" className="py-20 px-6 sm:px-8 md:py-28 lg:py-32 bg-white">
+    <div
+      ref={ref}
+      className={`grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-0 ${step.imagePosition === 'right' ? 'md:direction-rtl' : ''
+        }`}
+    >
+      {/* Image */}
+      <div
+        className={`relative overflow-hidden rounded-lg ${step.imagePosition === 'right' ? 'md:order-2' : ''
+          } ${step.imagePosition === 'left' ? 'slide-left' : 'slide-right'} ${isInView ? 'animate-in' : ''}`}
+      >
+        <div className="aspect-square md:aspect-auto md:h-96">
+          <img
+            src={step.image}
+            alt={step.title}
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          />
+        </div>
+      </div>
+
+      {/* Content */}
+      <div
+        className={`${step.imagePosition === 'right' ? 'md:order-1' : ''} ${step.imagePosition === 'right' ? 'slide-left' : 'slide-right'
+          } ${isInView ? 'animate-in' : ''}`}
+      >
+        <div className={`${step.imagePosition === 'right' ? 'me-6' : 'ms-6'} mb-6`}>
+          <p className="md:text-4xl sm:text-base font-serif font-semibold text-secondary tracking-[0.15em] mb-2">
+            STEP
+          </p>
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+            {step.number}
+          </h3>
+          <h4 className="text-xl sm:text-2xl font-semibold text-foreground">
+            {step.title}
+          </h4>
+        </div>
+        <p className={`${step.imagePosition === 'right' ? 'me-6' : 'ms-6'} text-base sm:text-lg text-foreground-secondary leading-relaxed`}>
+          {step.description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export function Approach() {
+  const { ref: headerRef, isInView: headerInView } = useInView({ threshold: 0.2 });
+
+  return (
+    <section id="approach" className="py-24 px-6 sm:px-8 md:py-32 lg:py-40 bg-background-secondary">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-24">
-          <p className="text-sm sm:text-base font-semibold text-secondary tracking-wide mb-2">
+        <div className={`text-center mb-20 md:mb-28 fade-up ${headerInView ? 'animate-in' : ''}`} ref={headerRef}>
+          <p className="text-sm sm:text-base font-semibold text-secondary tracking-[0.2em] mb-3">
             HOW WE DO IT?
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground">
-            OUR APPROACH
+            Our Approach
           </h2>
         </div>
 
         {/* Steps */}
-        <div className="space-y-20 md:space-y-32">
+        <div className="space-y-24 md:space-y-36">
           {steps.map((step, index) => (
-            <div
-              key={step.number}
-              className={`grid grid-cols-1 md:grid-cols-2 items-center ${
-                step.imagePosition === 'right' ? 'md:direction-rtl' : ''
-              }`}
-            >
-              {/* Image */}
-              <div
-                className={`relative overflow-hidden rounded-lg ${
-                  step.imagePosition === 'right' ? 'md:order-2' : ''
-                }`}
-              >
-                <div className="aspect-square md:aspect-auto md:h-96">
-                  <img
-                    src={step.image}
-                    alt={step.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className={step.imagePosition === 'right' ? 'md:order-1' : ''}>
-                <div className={`${step.imagePosition === 'right' ? 'me-6' : 'ms-6'} mb-6`}>
-                  <p className="md:text-4xl sm:text-base font-serif font-semibold text-secondary tracking-wide mb-2">
-                    STEP
-                  </p>
-                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-                    {step.number}
-                  </h3>
-                  <h4 className="text-xl sm:text-2xl font-semibold text-foreground">
-                    {step.title}
-                  </h4>
-                </div>
-                <p className={`${step.imagePosition === 'right' ? 'me-6' : 'ms-6'} text-base sm:text-lg text-foreground-secondary leading-relaxed`}>
-                  {step.description}
-                </p>
-              </div>
-            </div>
+            <ApproachStep key={step.number} step={step} index={index} />
           ))}
         </div>
       </div>

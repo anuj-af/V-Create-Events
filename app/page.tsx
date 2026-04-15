@@ -10,6 +10,7 @@ import { Testimonials } from '@/components/testimonials'
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
 import { ValuesSection } from '@/components/values-section'
+import { SectionDivider } from '@/components/section-divider'
 
 export default function Home() {
   return (
@@ -17,12 +18,16 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutUs />
+      <SectionDivider />
       <Services />
       <Approach />
+      <SectionDivider />
       <Portfolio />
       <ValuesSection />
+      <SectionDivider />
       <InstagramSection />
       <Destinations />
+      <SectionDivider />
       <Testimonials />
       <Contact />
       <Footer />

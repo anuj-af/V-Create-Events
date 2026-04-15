@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
+import { useInView } from '@/hooks/use-in-view';
 
 const socialServices = [
   {
@@ -47,57 +48,14 @@ const socialServices = [
   },
 ];
 
-const corporateServices = [
-  {
-    id: 1,
-    title: 'EVENT MANAGEMENT & PLANNING',
-    description: 'Complete event planning from conception to execution with meticulous attention to detail.',
-  },
-  {
-    id: 2,
-    title: 'LOCATION SCOUTING & MAPPING',
-    description: 'Strategic venue selection and site planning for optimal event flow.',
-  },
-  {
-    id: 3,
-    title: 'HOTEL CONTRACTING',
-    description: 'Negotiated hotel packages and accommodation arrangements for guests.',
-  },
-  {
-    id: 4,
-    title: 'AIRCRAFT CHARTERING',
-    description: 'Premium travel arrangements and logistics for delegates and VIPs.',
-  },
-  {
-    id: 5,
-    title: 'TRANSPORT & ITINERARY SCHEDULING',
-    description: 'Comprehensive transportation and timeline management for seamless operations.',
-  },
-  {
-    id: 6,
-    title: 'CULINARY EXPERIENCES',
-    description: 'Curated menus, gastronomy coordination, and premium catering services.',
-  },
-  {
-    id: 7,
-    title: 'ENTERTAINMENT HANDLING',
-    description: 'Professional entertainment coordination and performances.',
-  },
-  {
-    id: 8,
-    title: 'SAFETY & SECURITY MANAGEMENT',
-    description: 'Comprehensive safety protocols and security arrangements.',
-  },
-];
-
 function ServiceCard({ title, description, isExpanded, onToggle }: any) {
   return (
-    <div className="border-b border-border last:border-b-0">
+    <div className="border-b border-border/60 last:border-b-0">
       <button
         onClick={onToggle}
         className="w-full py-5 px-0 flex items-center justify-between hover:opacity-70 transition-opacity duration-300 group"
       >
-        <h3 className="text-sm sm:text-base font-semibold text-foreground text-left">
+        <h3 className="text-sm sm:text-base font-semibold text-foreground text-left tracking-[0.05em]">
           {title}
         </h3>
         <ChevronDown
@@ -108,19 +66,22 @@ function ServiceCard({ title, description, isExpanded, onToggle }: any) {
         />
       </button>
 
-      {isExpanded && (
-        <div className="pb-5 pr-6">
-          <p className="text-sm text-foreground-secondary leading-relaxed">
-            {description}
-          </p>
+      <div className={`accordion-content ${isExpanded ? 'open' : ''}`}>
+        <div>
+          <div className="pb-5 pr-6">
+            <p className="text-sm text-foreground-secondary leading-relaxed">
+              {description}
+            </p>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
 
 export function Services() {
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
+  const { ref, isInView } = useInView({ threshold: 0.05 });
 
   const toggleCard = (id: string) => {
     setExpandedCards((prev) => ({
@@ -132,15 +93,15 @@ export function Services() {
   const services = socialServices;
 
   return (
-    <section id="services" className="py-0">
+    <section id="services" className="py-0" ref={ref}>
       {/* Section Header - Full Width Background */}
-      <div className="bg-background px-6 sm:px-8 py-16 md:py-20 border-b border-border">
+      <div className={`bg-background-secondary px-6 sm:px-8 py-20 md:py-24 fade-up ${isInView ? 'animate-in' : ''}`}>
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm sm:text-base font-semibold text-secondary tracking-wide mb-2">
+          <p className="text-sm sm:text-base font-semibold text-secondary tracking-[0.2em] mb-3">
             WHAT WE DO
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground mb-6">
-            OUR SERVICES
+            Our Services
           </h2>
           <p className="text-base sm:text-lg text-foreground-secondary max-w-2xl mx-auto">
             At V-Create Events, every dream finds its moment and we make it unforgettable. No goal is too big, no task is too small.
@@ -148,15 +109,15 @@ export function Services() {
         </div>
       </div>
 
-      {/* Social Heading - Centered */}
-      <div className="bg-gray-900 hover:bg-gray-700 border-b border-border px-6 sm:px-8 py-8 md:py-10 transition-colors duration-300 ease-in-out">
-        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white text-center">SOCIAL</h3>
+      {/* Social Heading - Refined */}
+      <div className="bg-[#1A1A1A] hover:bg-[#252525] border-t-2 border-secondary/40 px-6 sm:px-8 py-8 md:py-10 transition-colors duration-500 ease-out">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white text-center tracking-[0.15em]">SOCIAL</h3>
       </div>
 
-      {/* Content Area - Two Column Layout (Social Only) */}
+      {/* Content Area - Two Column Layout */}
       <div className="flex flex-col lg:flex-row">
         {/* Social Events Content - Left Column */}
-        <div className="w-full lg:w-1/2 bg-background px-6 sm:px-8 py-8 md:py-12">
+        <div className={`w-full lg:w-1/2 bg-background px-6 sm:px-8 py-8 md:py-12 fade-up ${isInView ? 'animate-in' : ''}`}>
           <div className="space-y-0">
             {services.map((service) => (
               <ServiceCard

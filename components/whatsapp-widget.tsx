@@ -1,7 +1,7 @@
 "use client";
 
 const whatsappNumber = "917999992961";
-const welcomeMessage = "Hi, I'm looking for event planning services and would like to discuss my requirements with The Shadi Knot. Please let me know how we can proceed.";
+const welcomeMessage = "Hi, I'm looking for event planning services and would like to discuss my requirements with V-Create Events. Please let me know how we can proceed.";
 
 export function WhatsappWidget() {
   const href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(welcomeMessage)}`;
@@ -11,7 +11,7 @@ export function WhatsappWidget() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-3 rounded-full bg-[#D00000] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-black/10 transition-transform duration-200 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-3 rounded-full bg-[#D00000] px-3 py-2 text-sm font-semibold text-white shadow-lg shadow-black/10 transition-transform duration-200 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       aria-label="Chat with us on WhatsApp"
     >
       <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
