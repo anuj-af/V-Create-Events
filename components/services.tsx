@@ -8,8 +8,8 @@ import { useInView } from '@/hooks/use-in-view';
 const socialServices = [
   {
     id: 1,
-    title: 'EVENT MANAGEMENT & PLANNING',
-    description: 'Effortless guest list management, RSVP tracking, dietary preferences, and seamless communication.',
+    title: 'EVENT MANAGEMENT PLANNING & EXECUTIONS',
+    description: 'End-to-end planning support, timeline coordination, guest management, and seamless execution.',
   },
   {
     id: 2,
@@ -19,22 +19,22 @@ const socialServices = [
   {
     id: 3,
     title: 'TRANSPORT & ITINERARY SCHEDULING',
-    description: 'Live performances, DJ services, transportation, and logistics coordination.',
+    description: 'Travel planning, route coordination, schedule management, and guest movement logistics.',
   },
   {
     id: 4,
-    title: 'END-TO-END LOGISTICS',
-    description: 'Floral arrangements, theme design, lighting setup, and aesthetic enhancements.',
+    title: 'END TO END LOGISTICS',
+    description: 'Complete coordination across vendors, operations, setup, and event-day support.',
   },
   {
     id: 5,
-    title: 'CULINARY EXPERIENCES',
-    description: 'Curated menus, gastronomy coordination, and premium catering services.',
+    title: 'CULINARY EXPERIENCE',
+    description: 'Curated menus, gastronomy coordination, and premium catering experiences.',
   },
   {
     id: 6,
     title: 'ENTERTAINMENT & ACTIVITIES',
-    description: 'Live entertainment, DJ services, activities, and curated experiences.',
+    description: 'Live entertainment, guest activities, performers, and curated experiences.',
   },
   {
     id: 7,
@@ -43,8 +43,8 @@ const socialServices = [
   },
   {
     id: 8,
-    title: 'SAFETY & SECURITY MANAGEMENT',
-    description: 'Comprehensive safety protocols and security arrangements.',
+    title: 'INVITATION & GIFTING',
+    description: 'Thoughtful invitation design, gifting curation, and presentation support.',
   },
 ];
 
