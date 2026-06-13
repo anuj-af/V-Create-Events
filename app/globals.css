@@ -138,11 +138,24 @@
 
   html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
   body {
     @apply bg-background text-foreground;
     letter-spacing: -0.3px;
+    width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -282,24 +295,6 @@
 
   .scroll-bounce {
     animation: scrollBounce 2s ease-in-out infinite;
-  }
-
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #FAF8F5;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #C8923D40;
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #C8923D80;
   }
 
   /* Accordion smooth height transition */
