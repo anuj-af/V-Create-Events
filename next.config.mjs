@@ -5,6 +5,20 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.cdninstagram.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'graph.instagram.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'scontent.cdninstagram.com',
+      },
+    ],
   },
 }
 
