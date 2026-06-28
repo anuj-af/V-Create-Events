@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 const navigation = [
@@ -45,11 +46,14 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="#home" className="flex-shrink-0" onClick={() => scrollToSection('#home')}>
-          <span className={`text-xl sm:text-2xl md:text-3xl font-serif font-bold transition-colors duration-500 ${
-            scrolled ? 'text-white' : 'text-white'
-          }`}>
-            V <span className="text-secondary">Create</span> Events
-          </span>
+          <Image
+            src="/logo.png"
+            alt="V-Create Events & Decor"
+            width={160}
+            height={60}
+            className="h-12 sm:h-14 w-auto brightness-0 invert transition-opacity duration-500"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -58,7 +62,7 @@ export function Navbar() {
             <button
               key={item.name}
               onClick={() => scrollToSection(item.href)}
-              className={`text-[11px] font-semibold tracking-[0.15em] transition-colors duration-300 hover:text-secondary ${
+              className={`text-[11px] font-nav tracking-[0.15em] transition-colors duration-300 hover:text-secondary ${
                 scrolled ? 'text-white/80' : 'text-white/80'
               }`}
             >
@@ -89,7 +93,7 @@ export function Navbar() {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-sm font-semibold text-white/80 hover:text-secondary transition-colors py-3 text-left tracking-[0.1em]"
+                className="text-sm font-nav text-white/80 hover:text-secondary transition-colors py-3 text-left tracking-[0.1em]"
               >
                 {item.name}
               </button>

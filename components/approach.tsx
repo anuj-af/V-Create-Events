@@ -92,7 +92,7 @@ export function Approach() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className={`text-center mb-20 md:mb-28 fade-up ${headerInView ? 'animate-in' : ''}`} ref={headerRef}>
-          <p className="text-sm sm:text-base font-semibold text-secondary tracking-[0.2em] mb-3">
+          <p className="text-sm sm:text-base font-nav text-secondary tracking-[0.2em] mb-3">
             HOW WE DO IT?
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground">

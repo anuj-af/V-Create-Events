@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Instagram, MessageCircle, Mail } from 'lucide-react'
 
 export function Footer() {
@@ -22,9 +23,15 @@ export function Footer() {
           </div>
 
           {/* Brand Logo */}
-          <h2 className="text-5xl sm:text-6xl md:text-7xl font-serif font-bold text-white mb-6 text-balance">
-            V<span className="text-white italic">Create</span> <span className='text-secondary'>Events</span>
-          </h2>
+          <div className="mb-6">
+            <Image
+              src="/logo.png"
+              alt="V-Create Events & Decor"
+              width={280}
+              height={200}
+              className="h-32 sm:h-40 md:h-48 w-auto mx-auto brightness-0 invert"
+            />
+          </div>
 
           {/* Decorative Infinity Element with gold gradient */}
           <div className="flex items-center justify-center gap-4 mb-8">

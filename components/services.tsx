@@ -97,21 +97,21 @@ export function Services() {
       {/* Section Header - Full Width Background */}
       <div className={`bg-background-secondary px-6 sm:px-8 py-20 md:py-24 fade-up ${isInView ? 'animate-in' : ''}`}>
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm sm:text-base font-semibold text-secondary tracking-[0.2em] mb-3">
+          <p className="text-sm sm:text-base font-nav text-secondary tracking-[0.2em] mb-3">
             WHAT WE DO
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground mb-6">
             Our Services
           </h2>
           <p className="text-base sm:text-lg text-foreground-secondary max-w-2xl mx-auto">
-            At V-Create Events, every dream finds its moment and we make it unforgettable. No goal is too big, no task is too small.
+            At V-Create Events, Every Dream Finds Its Moment And We Make It Unforgettable. No Goal Is Too Big, No Task Is Too Small.
           </p>
         </div>
       </div>
 
       {/* Social Heading - Refined */}
       <div className="bg-[#1A1A1A] hover:bg-[#252525] border-t-2 border-secondary/40 px-6 sm:px-8 py-8 md:py-10 transition-colors duration-500 ease-out">
-        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white text-center tracking-[0.15em]">SOCIAL</h3>
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-nav text-white text-center tracking-[0.15em]">SOCIAL</h3>
       </div>
 
       {/* Content Area - Two Column Layout */}

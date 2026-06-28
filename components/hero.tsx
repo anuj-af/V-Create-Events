@@ -16,7 +16,7 @@ const heroSlides = [
   },
   {
     id: 3,
-    image: '/banners/1b.png',
+    image: '/banners/1a.png',
     headline: 'CREATING UNFORGETTABLE MOMENTS',
   },
 ];

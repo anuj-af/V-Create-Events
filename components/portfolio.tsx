@@ -6,24 +6,21 @@ import { useInView } from '@/hooks/use-in-view';
 const portfolioItems = [
   {
     id: 1,
-    title: 'Eternal Garden Wedding',
+    title: 'Aman and Kefi',
     image: '/portfolio/2.png',
-    testimonial: 'Absolutely magical! They made our dreams come true.',
-    couple: 'Sarah & John',
+    couple: 'Aman and Kefi',
   },
   {
     id: 2,
-    title: 'Royal Celebration',
+    title: 'Aradhya And Muskan',
     image: '/portfolio/3.png',
-    testimonial: 'Every detail was perfect. Thank you for an unforgettable day!',
-    couple: 'Priya & Arjun',
+    couple: 'Aradhya And Muskan',
   },
   {
     id: 3,
-    title: 'Beachside Romance',
+    title: 'Vishal And Shivani',
     image: '/portfolio/1.png',
-    testimonial: 'Professional, creative, and so easy to work with.',
-    couple: 'Emma & Michael',
+    couple: 'Vishal And Shivani',
   }
 ];
 
@@ -36,14 +33,14 @@ export function Portfolio() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className={`text-center mb-16 fade-up ${isInView ? 'animate-in' : ''}`}>
-          <p className="text-sm sm:text-base font-semibold text-secondary tracking-[0.2em] mb-3">
+          <p className="text-sm sm:text-base font-nav text-secondary tracking-[0.2em] mb-3">
             OUR WORK
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground mb-6">
             Portfolio
           </h2>
           <p className="text-base sm:text-lg text-foreground-secondary max-w-2xl mx-auto">
-            We poured our heart and soul into these weddings and maybe we will do the same for you one day soon
+            Every wedding here was a privilege. Yours could be next.
           </p>
         </div>
 
@@ -71,9 +68,6 @@ export function Portfolio() {
                 <h3 className="text-xl sm:text-2xl font-serif font-bold text-white mb-4 text-balance">
                   {item.title}
                 </h3>
-                <p className="text-sm sm:text-base text-white/90 mb-4 italic">
-                  &ldquo;{item.testimonial}&rdquo;
-                </p>
                 <p className="text-sm font-semibold text-secondary">
                   {item.couple}
                 </p>

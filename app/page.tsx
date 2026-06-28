@@ -4,9 +4,8 @@ import { AboutUs } from '@/components/about-us'
 import { Services } from '@/components/services'
 import { Approach } from '@/components/approach'
 import { Portfolio } from '@/components/portfolio'
-import { Destinations } from '@/components/destinations'
+// import { Destinations } from '@/components/destinations'  // Hidden for now - will enable later
 import { InstagramSection } from '@/components/instagram-section'
-import { Testimonials } from '@/components/testimonials'
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
 import { ValuesSection } from '@/components/values-section'
@@ -26,9 +25,7 @@ export default function Home() {
       <ValuesSection />
       <SectionDivider />
       <InstagramSection />
-      <Destinations />
-      <SectionDivider />
-      <Testimonials />
+      {/* <Destinations />  // Hidden for now - will enable later */}
       <Contact />
       <Footer />
     </main>

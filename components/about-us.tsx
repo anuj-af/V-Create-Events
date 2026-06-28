@@ -10,7 +10,11 @@ const teamMembers = [
     name: 'Vishu Patni',
     title: 'Founder, V-Create Events & Decor',
     image: '/founders/vishesh.png',
-    bio: 'Vishu is the heart and soul behind every celebration we create. With a fearless, youthful energy and meticulous eye for detail, he brings visions to life with precision, creativity, and care. From the first conversation to the final moment, he listens, adapts, and goes above and beyond so every element feels personal and unforgettable.',
+    bio: `Vishu is the heart and soul behind every celebration we bring to life. Whether it's an intimate gathering or a grand affair, he approaches every project with the same relentless dedication to make it feel personal, beautiful, and utterly unforgettable.
+
+"From the very first conversation, Vishu listens. He adapts as your vision evolves, anticipates what you didn't even know to ask for, and never stops until every detail is exactly right."
+
+What sets Vishu apart isn't just his creativity or precision it's his presence. He's with you at every step, from the earliest ideas to the final, breathtaking moment. When things shift last minute, he's already three steps ahead. When you need reassurance, he's there. His philosophy is simple: going above and beyond isn't extra  it's the standard.`,
   }
 ];
 
@@ -60,7 +64,7 @@ export function AboutUs() {
               <p className="text-base sm:text-lg font-semibold text-secondary mb-6 tracking-[0.1em]">
                 {currentMember.title}
               </p>
-              <p className="text-base text-foreground-secondary leading-relaxed mb-8">
+              <p className="text-base text-foreground-secondary leading-relaxed mb-8" style={{ whiteSpace: 'pre-line' }}>
                 {currentMember.bio}
               </p>
 

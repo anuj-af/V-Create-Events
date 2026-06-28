@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Instagram, MessageCircle } from 'lucide-react';
+import { Phone, MapPin, Instagram, MessageCircle, Mail } from 'lucide-react';
 import { useInView } from '@/hooks/use-in-view';
 
 export function Contact() {
@@ -107,7 +107,7 @@ export function Contact() {
 
             {/* Social Links */}
             <div className="mt-12">
-              <p className="text-sm font-semibold text-foreground-secondary mb-6 tracking-[0.15em]">
+              <p className="text-sm font-nav text-foreground-secondary mb-6 tracking-[0.15em]">
                 CONNECT WITH US
               </p>
               <div className="flex gap-4">
@@ -139,17 +139,11 @@ export function Contact() {
                 <Phone size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-sm font-semibold text-foreground-secondary tracking-wide">Phone</p>
-                  <a href="tel:+91-9876543210" className="text-foreground hover:text-secondary transition-colors">
-                    +91 98765 43210
+                  <a href="tel:+917999992961" className="text-foreground hover:text-secondary transition-colors block">
+                    +91 - 7999992961
                   </a>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <Mail size={20} className="text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <p className="text-sm font-semibold text-foreground-secondary tracking-wide">Email</p>
-                  <a href="mailto:hello@v-create.com" className="text-foreground hover:text-secondary transition-colors">
-                    hello@v-create.com
+                  <a href="tel:+919926461641" className="text-foreground hover:text-secondary transition-colors block">
+                    +91- 9926461641
                   </a>
                 </div>
               </div>
@@ -157,8 +151,7 @@ export function Contact() {
                 <MapPin size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-sm font-semibold text-foreground-secondary tracking-wide">Location</p>
-                  <p className="text-foreground">Indore, India</p>
-                  <p className="text-foreground">Dubai, UAE</p>
+                  <p className="text-foreground">India | Dubai</p>
                 </div>
               </div>
             </div>

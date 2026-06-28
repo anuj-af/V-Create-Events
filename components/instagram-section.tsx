@@ -109,7 +109,7 @@ export function InstagramSection() {
             href="https://www.instagram.com/v_createevents"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors text-sm font-semibold tracking-[0.15em]"
+            className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors text-sm font-nav tracking-[0.15em]"
           >
             <InstagramIcon size={16} />
             @V_CREATEEVENTS
