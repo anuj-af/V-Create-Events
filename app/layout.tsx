@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   description: 'Discover luxury wedding and events services with premium planning, stunning design, and unforgettable celebrations for the most important moments of your life.',
   icons: {
     icon: '/logo.png',
-    apple: '/apple-icon.png',
+    apple: '',
   },
 }
 

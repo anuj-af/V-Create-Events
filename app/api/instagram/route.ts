@@ -1,12 +1,14 @@
 import { NextResponse } from 'next/server';
 
-export const revalidate = 3600; // Cache for 1 hour
+// Disable all caching — always fetch fresh data
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 interface InstagramMedia {
   id: string;
   caption?: string;
   media_type: 'IMAGE' | 'VIDEO' | 'CAROUSEL_ALBUM';
-  media_url: string;
+  media_url?: string;
   thumbnail_url?: string;
   permalink: string;
   timestamp: string;
@@ -53,22 +55,21 @@ export async function GET(request: Request) {
   }
 
   try {
+    // With the Facebook Login for Business token, we query graph.facebook.com instead of graph.instagram.com.
+    // This endpoint natively supports media_url for CAROUSEL_ALBUMs as well!
     const fields = 'id,caption,media_type,media_url,thumbnail_url,permalink,timestamp';
-    let url = `https://graph.instagram.com/v25.0/${userId}/media?fields=${fields}&limit=${limit}&access_token=${accessToken}`;
+    let url = `https://graph.facebook.com/v25.0/${userId}/media?fields=${fields}&limit=${limit}&access_token=${accessToken}`;
 
     if (after) {
       url += `&after=${after}`;
     }
 
-    const response = await fetch(url, {
-      next: { revalidate: 3600 }, // ISR: revalidate every 1 hour
-    });
+    const response = await fetch(url, { cache: 'no-store' });
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
       console.error('[Instagram API] Error response:', response.status, errorData);
 
-      // Return fallback data on API error
       return NextResponse.json({
         data: fallbackPosts.slice(0, parseInt(limit)),
         paging: null,
@@ -79,8 +80,21 @@ export async function GET(request: Request) {
 
     const data: InstagramAPIResponse = await response.json();
 
+    console.log(
+      `[Instagram API] Received ${data.data.length} posts. Types:`,
+      data.data.map((p) => p.media_type)
+    );
+
+    // Filter out any items that still somehow lack a media source (just to be safe)
+    const validData = data.data.filter(post => post.media_url || post.thumbnail_url);
+
+    // Sort by timestamp descending (newest first) just to ensure API order is strict
+    const sorted = validData.sort(
+      (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+    );
+
     return NextResponse.json({
-      data: data.data,
+      data: sorted,
       paging: data.paging || null,
       isFallback: false,
     });
