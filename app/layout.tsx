@@ -1,19 +1,19 @@
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond, Playfair_Display, Marcellus } from 'next/font/google'
+import localFont from 'next/font/local'
+import { Raleway, Marcellus } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { WhatsappWidget } from '@/components/whatsapp-widget'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ['300', '400', '500', '600', '700'],
+const leJour = localFont({
+  src: '../public/fonts/LeJourSerif.otf',
   variable: '--font-serif'
 })
 
-const playfair = Playfair_Display({
+const raleway = Raleway({
   subsets: ["latin"],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-display'
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-sans'
 })
 
 const marcellus = Marcellus({
@@ -43,8 +43,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${playfair.variable} ${marcellus.variable}`}>
-      <body className="font-serif antialiased bg-white text-gray-900">
+    <html lang="en" className={`${leJour.variable} ${raleway.variable} ${marcellus.variable}`}>
+      <body className="font-sans antialiased bg-white text-gray-900">
         {children}
         <WhatsappWidget />
         <Analytics />

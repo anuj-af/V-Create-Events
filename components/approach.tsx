@@ -66,10 +66,10 @@ function ApproachStep({ step, index }: { step: typeof steps[0]; index: number })
           } ${isInView ? 'animate-in' : ''}`}
       >
         <div className={`${step.imagePosition === 'right' ? 'me-6' : 'ms-6'} mb-6`}>
-          <p className="md:text-4xl sm:text-base font-serif font-semibold text-secondary tracking-[0.15em] mb-2">
+          <p className="md:text-4xl sm:text-base font-serif font-light text-secondary tracking-[0.15em] mb-2">
             STEP
           </p>
-          <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-foreground mb-4">
             {step.number}
           </h3>
           <h4 className="text-xl sm:text-2xl font-semibold text-foreground">
@@ -95,7 +95,7 @@ export function Approach() {
           <p className="text-sm sm:text-base font-nav text-secondary tracking-[0.2em] mb-3">
             HOW WE DO IT?
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-foreground">
             Our Approach
           </h2>
         </div>

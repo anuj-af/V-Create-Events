@@ -29,7 +29,7 @@ export function Destinations() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className={`text-center mb-16 fade-up ${isInView ? 'animate-in' : ''}`}>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground text-balance">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-foreground text-balance">
             Destinations
           </h2>
         </div>
@@ -51,7 +51,7 @@ export function Destinations() {
 
               {/* Overlay */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/25 transition-all duration-500 group-hover:bg-black/35">
-                <h3 className="text-white font-serif text-2xl sm:text-xl md:text-2xl font-bold text-center tracking-[0.15em] px-4">
+                <h3 className="text-white font-serif text-2xl sm:text-xl md:text-2xl font-light text-center tracking-[0.15em] px-4">
                   {destination.name}
                 </h3>
               </div>

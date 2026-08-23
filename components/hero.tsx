@@ -59,8 +59,8 @@ export function Hero() {
             <div className="absolute inset-0 bg-black/20" />
 
             {/* Content */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white text-center px-6 max-w-4xl text-balance">
+            <div className="absolute inset-0 flex items-end justify-end pb-24 pr-8 md:pr-16 md:pb-32">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-serif font-light text-white text-right max-w-4xl text-balance drop-shadow-lg leading-tight uppercase">
                 {slide.headline}
               </h1>
             </div>

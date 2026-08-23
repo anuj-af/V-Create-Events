@@ -50,7 +50,7 @@ export function Contact() {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-black/10 flex items-center justify-center">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white text-center px-6 text-balance">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-white text-center px-6 text-balance">
                 LET US COORDINATE, SO YOU CAN CELEBRATE
               </h2>
             </div>
@@ -61,7 +61,7 @@ export function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Form Section */}
           <div className={`lg:col-span-2 fade-up ${isInView ? 'animate-in' : ''}`} style={{ transitionDelay: '0.1s' }}>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground mb-8">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-light text-foreground mb-8">
               Get In Touch With Us
             </h3>
 

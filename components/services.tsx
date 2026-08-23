@@ -100,7 +100,7 @@ export function Services() {
           <p className="text-sm sm:text-base font-nav text-secondary tracking-[0.2em] mb-3">
             WHAT WE DO
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-foreground mb-6">
             Our Services
           </h2>
           <p className="text-base sm:text-lg text-foreground-secondary max-w-2xl mx-auto">

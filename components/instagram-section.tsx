@@ -102,7 +102,7 @@ export function InstagramSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className={`text-center mb-16 fade-up ${isInView ? 'animate-in' : ''}`}>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-foreground mb-4">
             Our Instagram
           </h2>
           <a

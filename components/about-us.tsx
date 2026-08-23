@@ -15,6 +15,19 @@ const teamMembers = [
 "From the very first conversation, Vishu listens. He adapts as your vision evolves, anticipates what you didn't even know to ask for, and never stops until every detail is exactly right."
 
 What sets Vishu apart isn't just his creativity or precision it's his presence. He's with you at every step, from the earliest ideas to the final, breathtaking moment. When things shift last minute, he's already three steps ahead. When you need reassurance, he's there. His philosophy is simple: going above and beyond isn't extra  it's the standard.`,
+  },
+  {
+    id: 2,
+    name: 'Komal Bhandari',
+    title: 'Co-Founder, V-Create Events & Decor',
+    image: '/founders/komal.png',
+    bio: `Komal is the creative force behind the décor and design that gives every V-CREATE celebration its signature charm. With an instinctive eye for aesthetics and an incredible attention to detail, she transforms ideas into beautifully curated spaces that feel thoughtful, personal, and truly memorable.
+
+“For Komal, great décor isn't just about how it looks it's about how it makes you feel. Every colour, every element, and every little detail has a purpose: to bring a vision to life in the most beautiful way possible.”
+
+What sets Komal apart is the calm and clarity she brings to the chaos of events. From managing décor and design to navigating last minute changes, she keeps the team grounded, motivated, and moving in the right direction. She believes that when the people behind the celebration are in sync, the celebration itself becomes effortless.
+
+Beyond the décor, Komal brings a sense of warmth and balance to every project. She believes in creating an environment where the team feels supported, heard, and confident while still pushing for excellence in every detail. Her philosophy is simple: dream beautifully, execute calmly, and never let the pressure take away from the joy of creating something extraordinary.`,
   }
 ];
 
@@ -29,7 +42,7 @@ export function AboutUs() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className={`text-center mb-16 md:mb-20 fade-up ${isInView ? 'animate-in' : ''}`}>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-foreground mb-8">
             About Us
           </h2>
           <p className="text-base sm:text-lg text-foreground-secondary leading-relaxed max-w-4xl mx-auto">
@@ -58,10 +71,10 @@ export function AboutUs() {
 
             {/* Team Member Info */}
             <div className={`w-full lg:w-7/12 slide-right ${isInView ? 'animate-in' : ''}`}>
-              <h3 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-3">
+              <h3 className="text-3xl sm:text-4xl font-serif font-light text-foreground mb-3">
                 {currentMember.name}
               </h3>
-              <p className="text-base sm:text-lg font-semibold text-secondary mb-6 tracking-[0.1em]">
+              <p className="text-base sm:text-lg font-serif font-light text-secondary mb-6 tracking-[0.1em]">
                 {currentMember.title}
               </p>
               <p className="text-base text-foreground-secondary leading-relaxed mb-8" style={{ whiteSpace: 'pre-line' }}>

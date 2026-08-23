@@ -36,7 +36,7 @@ export function Portfolio() {
           <p className="text-sm sm:text-base font-nav text-secondary tracking-[0.2em] mb-3">
             OUR WORK
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-foreground mb-6">
             Portfolio
           </h2>
           <p className="text-base sm:text-lg text-foreground-secondary max-w-2xl mx-auto">
@@ -65,7 +65,7 @@ export function Portfolio() {
 
               {/* Full Overlay on Hover */}
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
-                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white mb-4 text-balance">
+                <h3 className="text-xl sm:text-2xl font-serif font-light text-white mb-4 text-balance">
                   {item.title}
                 </h3>
                 <p className="text-sm font-semibold text-secondary">

@@ -86,9 +86,9 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-serif);
+  --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
-  --font-display: var(--font-display);
+  --font-display: var(--font-serif);
   --font-nav: var(--font-nav);
   --color-background: var(--background);
   --color-background-secondary: var(--background-secondary);
@@ -161,15 +161,15 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-    font-weight: 500;
+    font-family: var(--font-serif);
+    font-weight: 300;
     text-wrap: balance;
     line-height: 1.15;
-    letter-spacing: 0.12em;
+    letter-spacing: normal;
   }
 
   p {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     line-height: 1.75;
     letter-spacing: 0.01em;
   }
